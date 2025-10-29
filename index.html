@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABEJ - Sistema Automático de Irrigação</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-seedling"></i> SABEJ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#componentes">Componentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#funcionamento">Funcionamento</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1><i class="fas fa-tint"></i> SABEJ</h1>
+            <p class="lead">Projeto: Irrigação Automática Inteligente</p>
+            <p>Matéria: Circuitos Elétricos</p>
+            <p>Ministrado por: Prof. Dra Annete S. Faesarella</p>
+        </div>
+    </section>
+
+    <!-- Sobre o Projeto -->
+    <section id="sobre" class="intro-section">
+        <div class="container">
+            <h2 class="section-title">Sobre o Projeto</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="lead">O SABEJ é um projeto desenvolvido pelos discentes do curso de Engenharia de Computação da Universidade São Francisco, por meio da componente curricular Circuitos Elétricos.</p>
+                    <p>O objetivo principal do projeto é aplicar conceitos teóricos em uma prática funcional, criando protótipos que integram eletrônica, programação e controle automatizado.</p>
+                </div>
+                <div class="col-lg-6">
+                    <p>Um dos protótipos desenvolvidos no âmbito do SABEJ é o sistema de irrigação automática inteligente, que combina sensores, atuadores e comunicação com serviços online para otimizar a irrigação de plantas de maneira econômica e eficiente.</p>
+                    <p>O projeto permite demonstrar, de forma prática, como tecnologias de baixo custo podem ser aplicadas para resolver problemas cotidianos, como o consumo excessivo de água ou a falta de monitoramento constante de plantas.</p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-lightbulb icon-feature"></i>
+                        <h4>Inovação</h4>
+                        <p>Tecnologia de baixo custo aplicada à sustentabilidade</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-wifi icon-feature"></i>
+                        <h4>Conectividade</h4>
+                        <p>Sistema conectado à internet para previsão do tempo</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-chart-line icon-feature"></i>
+                        <h4>Eficiência</h4>
+                        <p>Economia de água com irrigação inteligente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Componentes -->
+    <section id="componentes" class="components-section">
+        <div class="container">
+            <h2 class="section-title">Componentes Utilizados</h2>
+            <p class="lead mb-5">O protótipo de irrigação automática desenvolvido pelo projeto SABEJ utiliza uma combinação de hardware simples, porém eficiente, permitindo a demonstração prática de conceitos de eletrônica, programação e automação.</p>
+
+            <div class="row g-4">
+                <!-- Microcontrolador -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card component-card">
+                        <div class="card-header">
+                            <i class="fas fa-microchip"></i> Microcontrolador ESP8266 NodeMCU V3
+                        </div>
+                        <img src="img/microcontrolador.png" class="card-img-top" alt="ESP8266 NodeMCU V3">
+                        <div class="card-body">
+                            <p class="card-text">O ESP8266 NodeMCU V3 é o cérebro do protótipo. Ele é um microcontrolador com conectividade Wi-Fi integrada, permitindo que o sistema se conecte à internet para obter dados de previsão do tempo através da API OpenWeatherMap.</p>
+                            <p class="card-text">Além disso, ele lê os sinais do sensor de umidade do solo e controla a ativação da bomba de água por meio do módulo de relé. Sua função é processar informações do sensor e da API, decidir quando e quanto irrigar, e acionar a bomba de forma automática.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sensor de Umidade -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card component-card">
+                        <div class="card-header">
+                            <i class="fas fa-thermometer-half"></i> Sensor de Umidade Capacitivo
+                        </div>
+                        <img src="img/sensor-de-umidade.png" class="card-img-top" alt="Sensor de umidade capacitivo">
+                        <div class="card-body">
+                            <p class="card-text">O sensor capacitivo de umidade do solo mede a quantidade de água presente no solo. Diferente dos sensores resistivos, ele não oxida facilmente, garantindo maior durabilidade.</p>
+                            <p class="card-text">O sensor envia uma leitura analógica para o ESP8266, que interpreta se o solo está seco, úmido ou molhado. Sua função é fornecer dados em tempo real sobre a umidade do solo, permitindo que o sistema decida se a irrigação é necessária ou não.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Bomba -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card component-card">
+                        <div class="card-header">
+                            <i class="fas fa-water"></i> Mini Bomba Água Submersa 6V
+                        </div>
+                        <img src="img/motor.png" class="card-img-top" alt="Mini Bomba de Água">
+                        <div class="card-body">
+                            <p class="card-text">A bomba de água submersa é responsável por transportar a água do reservatório até o solo da planta. Ela funciona com baixa tensão (6V) e possui vazão adequada (120L/h) para irrigar uma planta de forma controlada, evitando desperdício.</p>
+                            <p class="card-text">Sua função é executar a irrigação física da planta conforme as instruções recebidas pelo ESP8266 via relé.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Módulo de Relé -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card component-card">
+                        <div class="card-header">
+                            <i class="fas fa-toggle-on"></i> Módulo de Relé 1 Canal 5V
+                        </div>
+                        <img src="img/rele.png" class="card-img-top" alt="Módulo de Relé">
+                        <div class="card-body">
+                            <p class="card-text">O módulo de relé funciona como um interruptor controlado eletronicamente. Ele permite que o microcontrolador ESP8266, que opera com sinais de baixa tensão, ligue ou desligue a bomba de água, que requer maior corrente.</p>
+                            <p class="card-text">O LED integrado indica quando o relé está ativo, facilitando a visualização do funcionamento do sistema. Sua função é controlar a bomba de água com segurança, isolando o circuito de alta potência do microcontrolador.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Protoboard -->
+                <div class="col-lg-12 mb-4">
+                    <div class="card component-card">
+                        <div class="card-header">
+                            <i class="fas fa-project-diagram"></i> Protoboard 400 Pontos
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="img/protoboard.png" class="card-img-top h-100" alt="Protoboard">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-text">A protoboard é utilizada como base para organizar a montagem do protótipo sem a necessidade de solda. Ela permite conectar o ESP8266, o sensor de umidade e o módulo de relé de forma clara e segura, facilitando ajustes e testes durante a demonstração.</p>
+                                    <p class="card-text">Sua função no projeto é servir como plataforma de montagem e conexão dos componentes, mantendo o protótipo organizado e funcional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionamento -->
+    <section id="funcionamento" class="intro-section">
+        <div class="container">
+            <h2 class="section-title">Como Funciona</h2>
+            
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4><i class="fas fa-cogs"></i> Lógica de Funcionamento</h4>
+                            <ol class="lead">
+                                <li>O ESP8266 se conecta ao Wi-Fi</li>
+                                <li>Consulta a API OpenWeatherMap para obter previsão do tempo</li>
+                                <li>Lê o sensor de umidade do solo</li>
+                                <li>Analisa as condições climáticas e a umidade</li>
+                                <li>Decide automaticamente quando e quanto irrigar</li>
+                                <li>Aciona a bomba através do módulo de relé</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text-center mb-4">Tabela de Decisão de Irrigação</h4>
+            <div class="table-responsive logic-table mb-5">
+                <table class="table table-striped table-hover mb-0">
+                    <thead class="table-success">
+                        <tr>
+                            <th>Condição Climática</th>
+                            <th>Umidade do Solo</th>
+                            <th>Tempo de Irrigação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-sun text-warning"></i> Sol forte</td>
+                            <td><i class="fas fa-burn text-danger"></i> Solo seco</td>
+                            <td><strong>10 segundos</strong></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-sun text-warning"></i> Sol forte</td>
+                            <td><i class="fas fa-tint text-primary"></i> Solo úmido</td>
+                            <td><strong>0 segundos</strong></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-cloud text-secondary"></i> Nublado</td>
+                            <td><i class="fas fa-burn text-danger"></i> Solo seco</td>
+                            <td><strong>5 segundos</strong></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-cloud-rain text-info"></i> Previsão de chuva</td>
+                            <td>Qualquer</td>
+                            <td><strong>0 segundos</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- API Info -->
+            <div class="api-info">
+                <h4><i class="fas fa-cloud"></i> API de Previsão do Tempo</h4>
+                <p class="lead">O sistema utiliza a <strong>OpenWeatherMap API</strong> para obter dados climáticos em tempo real:</p>
+                <ul>
+                    <li><i class="fas fa-temperature-high"></i> Temperatura atual</li>
+                    <li><i class="fas fa-water"></i> Umidade do ar</li>
+                    <li><i class="fas fa-cloud"></i> Condição do céu (ensolarado, nublado, etc.)</li>
+                    <li><i class="fas fa-cloud-rain"></i> Previsão de chuva</li>
+                    <li><i class="fas fa-wind"></i> Velocidade do vento</li>
+                </ul>
+                <p class="mb-0"><i class="fas fa-info-circle"></i> A API gratuita permite até 1.000 chamadas por dia, ideal para projetos educacionais.</p>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h4><i class="fas fa-check-circle text-success"></i> Vantagens do Projeto</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>Baixo custo de implementação</li>
+                                        <li>Fácil montagem e manutenção</li>
+                                        <li>Funcional e didático</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li>Economia de água</li>
+                                        <li>Automação completa</li>
+                                        <li>Escalável para múltiplas plantas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3><i class="fas fa-seedling"></i> SABEJ</h3>
+            <p>Site desenvolvido pelos Discentes de Engenharia de Computação</p>
+            <p>Universidade São Francisco</p>
+            <p class="mb-0">&copy; <span id="currentYear"></span> SABEJ. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Atualiza o ano atual no footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
